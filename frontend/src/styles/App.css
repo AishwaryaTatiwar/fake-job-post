@@ -1,0 +1,177 @@
+/* General styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light theme (default) */
+.light-theme {
+  color: #213547;
+  background-color: #ffffff;
+}
+
+/* Dark theme */
+.dark-theme {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.light-theme .navbar {
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .navbar {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.light-theme .logo a {
+  color: #646cff;
+}
+
+.dark-theme .logo a {
+  color: #747bff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.light-theme .nav-link {
+  color: #213547;
+}
+
+.dark-theme .nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #646cff;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.get-started-button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.light-theme .get-started-button {
+  background-color: #646cff;
+  color: white;
+}
+
+.dark-theme .get-started-button {
+  background-color: #747bff;
+  color: white;
+}
+
+.get-started-button:hover {
+  background-color: #535bf2;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  padding: 0.4em 0.8em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.light-theme .theme-toggle-btn {
+  color: #213547;
+  background-color: #e6e6e6;
+}
+
+.dark-theme .theme-toggle-btn {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #333;
+}
+
+.theme-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+/* Main content styles */
+main {
+  padding: 2rem;
+  margin-top: 80px; /* To avoid content being hidden behind the fixed navbar */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .auth-section {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

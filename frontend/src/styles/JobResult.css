@@ -1,0 +1,198 @@
+.results-container {
+  margin-top: 5%;
+  padding: 100px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Added for positioning the fraud indicator */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+.light-theme .results-container {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .results-container {
+  background-color: #242424;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Download button styles */
+.download-btn-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+}
+
+.download-pdf-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.light-theme .download-pdf-btn {
+  background-color: #4285f4;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .download-pdf-btn {
+  background-color: #5c9eff;
+  color: #1a1a1a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.download-pdf-btn:hover {
+  transform: translateY(-2px);
+}
+
+.light-theme .download-pdf-btn:hover {
+  background-color: #3367d6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .download-pdf-btn:hover {
+  background-color: #6ca8ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Fraud indicator styles */
+.fraud-indicator {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+}
+
+.fraud-symbol {
+  font-size: 24px; /* Medium sized symbol */
+  display: inline-block;
+}
+
+.fraud-symbol-tick {
+  color: #4caf50; /* Green color that works in both themes */
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+}
+
+.fraud-symbol-cross {
+  color: #f44336; /* Red color that works in both themes */
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+}
+
+.results-container h2 {
+  transition: color 0.3s ease;
+  text-align: center; /* Center the heading */
+  width: 100%; /* Ensure full width for proper centering */
+}
+
+.light-theme .results-container h2 {
+  color: #333;
+}
+
+.dark-theme .results-container h2 {
+  color: white;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  gap: 50px;
+  margin-top: 10px;
+  width: 100%; /* Ensure full width */
+  max-width: 1000px; /* Limit maximum width for better readability */
+}
+
+/* Single column grid styles */
+.results-grid.single-column {
+  grid-template-columns: 1fr;
+  max-width: 600px; /* Slightly narrower for single column */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-item {
+  padding: 15px;
+  border-radius: 4px;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.light-theme .result-item {
+  border: 1px solid #ddd;
+  background-color: white;
+}
+
+.dark-theme .result-item {
+  border: 1px solid #444;
+  background-color: #333;
+}
+
+.results-grid h3 {
+  margin: 0 0 10px 0;
+  transition: color 0.3s ease;
+}
+
+.light-theme .results-grid h3 {
+  color: #333;
+}
+
+.dark-theme .results-grid h3 {
+  color: white;
+}
+
+.result-item p {
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.light-theme .result-item p {
+  color: #555;
+}
+
+.dark-theme .result-item p {
+  color: azure;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .results-container {
+    padding: 15px;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .download-btn-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fraud-indicator {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .results-container h2 {
+    padding-left: 0;
+    text-align: center;
+  }
+}
