@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import './styles/AboutUS.css'; // Import the CSS file for styling
+import './styles/AboutUs.css'; // Import the CSS file for styling
 import aboutUsImage from './Images/login-page-banner.png'; // Import your image
 
 const AboutUs = () => {
