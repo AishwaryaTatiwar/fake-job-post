@@ -5,6 +5,7 @@ import Tesseract from "tesseract.js";
 import { FiUpload } from "react-icons/fi";
 
 const JobForm = ({ setJobData, setLoading, setError }) => {
+  // eslint-disable-next-line no-unused-vars
   const [url, setUrl] = useState("");
   const [jobPost, setJobPost] = useState("");
   const [platform, setPlatform] = useState("");
@@ -104,7 +105,7 @@ const JobForm = ({ setJobData, setLoading, setError }) => {
     <div className="form-container" style={styles.container}>
       <form onSubmit={handleSubmit} style={styles.form}>
         {/* URL Input */}
-        <div style={styles.formGroup}>
+        {/* <div style={styles.formGroup}>
           <label htmlFor="url" style={styles.label}>
             Job URL
           </label>
@@ -116,7 +117,7 @@ const JobForm = ({ setJobData, setLoading, setError }) => {
             onChange={(e) => setUrl(e.target.value)}
             style={styles.input}
           />
-        </div>
+        </div> */}
 
         {/* Image Upload with Toggle */}
         <div style={styles.formGroup}>
