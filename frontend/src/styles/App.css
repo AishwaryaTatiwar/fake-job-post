@@ -1,4 +1,3 @@
-/* General styles */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -9,18 +8,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Light theme (default) */
-.light-theme {
-  color: #213547;
-  background-color: #ffffff;
-}
-
-/* Dark theme */
-.dark-theme {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -28,6 +15,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-theme {
+  color: #213547;
+  background-color: #ffffff;
+}
+
+.dark-theme {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 }
 
 /* Navbar styles */
@@ -123,7 +120,6 @@ body {
   background-color: #535bf2;
 }
 
-/* Theme toggle button */
 .theme-toggle-btn {
   background: none;
   border: 1px solid currentColor;
@@ -148,30 +144,112 @@ body {
   opacity: 0.8;
 }
 
-/* Main content styles */
 main {
   padding: 2rem;
-  margin-top: 80px; /* To avoid content being hidden behind the fixed navbar */
+  margin-top: 80px;
 }
 
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: none;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+.desktop-auth {
+  display: flex;
+}
+.mobile-auth {
+  display: none;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    background-color: inherit;
+    transition: left 0.3s ease;
+    z-index: 1050;
+    padding-top: 4rem;
+    padding-left: 1rem;
+  }
+
+  .navbar.active {
+    left: 0;
   }
 
   .nav-links {
-    margin-top: 1rem;
+    flex-direction: column;
     width: 100%;
     gap: 1rem;
-    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+    width: 100%;
   }
 
   .auth-section {
-    margin-top: 1rem;
+    flex-direction: column;
     width: 100%;
-    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+  .hamburgerclose{
+    margin-left: 200px;
+  }
+  .logo{
+    margin-top: -470%;
+  }
+  #home{
+    margin-top: -450%;
+  }
+  .get-started-button{
+    margin-left: 80%;
+  }
+  .mobile-user{
+    margin-left: 80%;
+  }
+  .desktop-auth {
+    display: none;
+  }
+  .mobile-auth {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: 1rem; /* Move to the right */
+    left: auto;   /* Remove left positioning */
+    z-index: 1200;
+    flex-direction: column;
+    align-items: flex-end;
+    background: none;
+    box-shadow: none;
+  }
+  .hamburger {
+    z-index: 1300; /* Ensure hamburger is always on top */
   }
 }
