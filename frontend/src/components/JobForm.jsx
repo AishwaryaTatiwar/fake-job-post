@@ -105,7 +105,7 @@ const JobForm = ({ setJobData, setLoading, setError }) => {
     <div className="form-container" style={styles.container}>
       <form onSubmit={handleSubmit} style={styles.form}>
         {/* URL Input */}
-        {/* <div style={styles.formGroup}>
+        <div style={styles.formGroup}>
           <label htmlFor="url" style={styles.label}>
             Job URL
           </label>
@@ -117,7 +117,7 @@ const JobForm = ({ setJobData, setLoading, setError }) => {
             onChange={(e) => setUrl(e.target.value)}
             style={styles.input}
           />
-        </div> */}
+        </div>
 
         {/* Image Upload with Toggle */}
         <div style={styles.formGroup}>
