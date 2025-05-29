@@ -20,7 +20,7 @@ function CompleteBackend() {
     <div className="completeBackend">
       <div className='outer-container'>
         <div className='header'>
-          <h1>Job Post Analyzer</h1>
+          <h1 style={{marginTop:"90px"}}>Job Post Analyzer</h1>
           <p>AI-Powered Job Scam Detector – Stay Safe, Stay Smart!Protects job seekers from scams & phishing attempts.Saves time by filtering out unreliable job listings.Ensures a safer, smarter job search experience.</p>
         </div>
         <img src={realFake} alt="Job Analyzer" />
@@ -47,3 +47,13 @@ function CompleteBackend() {
 }
 
 export default CompleteBackend;
+
+
+
+
+
+
+
+
+
+

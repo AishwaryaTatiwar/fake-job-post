@@ -1,9 +1,9 @@
-/* Home container */
+/*Home container
 .home-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   background-size: cover;
   background-position: center;
   padding: 0 5%;
@@ -18,7 +18,6 @@
   background-color: #242424;
 }
 
-/* Welcome message */
 .welcome-message {
   max-width: 600px;
   text-align: left;
@@ -44,7 +43,6 @@
   margin-bottom: 2rem;
 }
 
-/* Call-to-action button */
 .cta-button {
   border-radius: 8px;
   border: none;
@@ -88,7 +86,6 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .home-container {
     flex-direction: column;
@@ -108,5 +105,157 @@
 
   .welcome-message p {
     font-size: 1rem;
+  }
+}
+
+*/
+
+
+/* Home container */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 5%;
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.3s ease;
+  gap: 40px;
+}
+
+.light-theme .home-container {
+  background-color: #f8f9fa;
+}
+
+.dark-theme .home-container {
+  background-color: #242424;
+}
+
+/* Welcome message */
+.welcome-message {
+  max-width: 600px;
+  text-align: left;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.light-theme .welcome-message {
+  color: #213547;
+}
+
+.dark-theme .welcome-message {
+  color: white;
+}
+
+.welcome-message h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.highlight-text {
+  color: #646cff;
+  font-weight: bold;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.cta-button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.8em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #646cff;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #535bf2;
+  transform: scale(1.05);
+}
+
+/* Image container */
+.welcome-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.image:hover {
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    padding-top: 70px;
+    height: auto;
+  }
+
+  .welcome-image {
+    order: -1;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .welcome-message {
+    margin: 0;
+  }
+
+  .welcome-message h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-message p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 80%;
   }
 }

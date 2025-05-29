@@ -1,4 +1,4 @@
-.completeBackend {
+/* .completeBackend {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -108,7 +108,6 @@
   transition: color 0.3s ease;
 }
 
-/* Modified platform-input styles for dark-light theme */
 .platform-input input{
   width: 70%;
   padding: 8px;
@@ -128,7 +127,6 @@
   color: #fff;
 }
 
-/* Optional focus state for better accessibility */
 .platform-input input:focus {
   outline: none;
   box-shadow: 0 0 3px black;
@@ -259,7 +257,6 @@
   color: #aaa;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .completeBackend {
     flex-direction: column;
@@ -292,4 +289,214 @@
   cursor: pointer;
   color: #007bff;
   margin-top: 0px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.completeBackend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+.completeBackend img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+  margin-top: 1rem;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.header {
+  padding: 0 20px;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.header p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Theme Colors */
+.light-theme {
+  --text-primary: #1a1a1a;
+  --text-secondary: #444;
+  --bg-card: #ffffff;
+  --input-bg: #f9f9f9;
+  --input-border: #ccc;
+}
+
+.dark-theme {
+  --text-primary: #f5f5f5;
+  --text-secondary: #bbb;
+  --bg-card: #2e2e2e;
+  --input-bg: #3a3a3a;
+  --input-border: #555;
+}
+
+/* Form Styling */
+.form-container {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 520px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  background-color: var(--input-bg);
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.platform-input {
+  margin-bottom: 20px;
+}
+
+.platform-input input {
+  width: 100%;
+}
+
+.submit-button {
+  background-color: #4e61ff;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #3c4fd6;
+}
+
+.loading-message,
+.error-message {
+  padding: 12px 16px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.light-theme .loading-message {
+  color: #444;
+}
+
+.dark-theme .loading-message {
+  color: #ddd;
+}
+
+.light-theme .error-message {
+  background-color: #ffe0e0;
+  color: #b00020;
+}
+
+.dark-theme .error-message {
+  background-color: #4a0f0f;
+  color: #ff8a8a;
+}
+
+.upload-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .completeBackend {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+}
+
