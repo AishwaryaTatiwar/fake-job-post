@@ -66,5 +66,4 @@ This system automates the detection process using ML.
 
 ---
 
-## 📂 Project Structure
 
